@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Service Maintenance</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_maintenance.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="home.html" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voiture-neuves.html">Neuves</a>
+                        <a href="voiture-occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assrurance.html">Assurance</a>
+                        <a href="maintenance.html  ">Entretien</a>
+                        <a href="location.html">Location</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="pub.html">Pub</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="#" class="btn btn-outline">Connexion</a>
+                    <a href="#" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="maintenance-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Nos Services</span>
+                <h2>Service Maintenance</h2>
+            </div>
+
+            <div class="maintenance-grid">
+                <div class="maintenance-card">
+                    <div class="maintenance-image">
+                        <img src="./assets/img/img_maintenance/maintenance.jpg" alt="Révision générale">
+                    </div>
+                    <div class="maintenance-content">
+                        <h3>Révision Générale</h3>
+                        <p>Diagnostic complet de votre véhicule avec vérification des points essentiels</p>
+                        <p class="car-price">À partir de 1990MAD</p>
+                    </div>
+                </div>
+
+                <div class="maintenance-card">
+                    <div class="maintenance-image">
+                        <img src="./assets/img/img_maintenance/huile.jpg" alt="Changement d'huile">
+                    </div>
+                    <div class="maintenance-content">
+                        <h3>Changement d'Huile</h3>
+                        <p>Service de vidange et remplacement des filtres</p>
+                        <p class="car-price">À partir de 890MAD</p>
+                    </div>
+                </div>
+
+                <div class="maintenance-card">
+                    <div class="maintenance-image">
+                        <img src="./assets/img/img_maintenance/frein.jpg" alt="Freinage">
+                    </div>
+                    <div class="maintenance-content">
+                        <h3>Système de Freinage</h3>
+                        <p>Vérification et remplacement des plaquettes et disques de frein</p>
+                        <p class="car-price">À partir de 1490MAD</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="booking-form">
+                <h3>Réserver un Service</h3>
+                <div class="form-group">
+                    <label for="service">Type de Service</label>
+                    <select id="service" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="revision">Révision Générale</option>
+                        <option value="huile">Changement d'Huile</option>
+                        <option value="freins">Système de Freinage</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date Souhaitée</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Heure Souhaitée</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle">Modèle du Véhicule</label>
+                    <input type="text" id="vehicle" placeholder="Ex: BMW Serie 5" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Commentaires</label>
+                    <textarea id="comments" rows="4" placeholder="Décrivez vos besoins spécifiques"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Réserver Maintenant</button>
+            </form>
+        </div>
+    </section>
+
+    <button class="chatbot-btn">
+        <i class='bx bx-message-rounded-dots'></i>
+    </button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voiture-neuves.html">Achat de voiture</a>
+                        <a href="location.html">Location</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Maintenance</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="#"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="#"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC, 75000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2024 CAR+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/js/script_maintenance.js"></script>
+</body>
+</html>
