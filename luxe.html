@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Voitures de Luxe</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_luxe.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="home.html" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="home.html" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="location.html">Location</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="/connexion" class="btn btn-outline">Connexion</a>
+                    <a href="/inscription" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Collection de Voitures de Luxe</h1>
+            <p>Découvrez notre sélection exclusive de véhicules d'exception</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <select class="filter-select" id="typeFilter">
+                    <option value="all">Type de service</option>
+                    <option value="vente">Vente</option>
+                    <option value="location">Location</option>
+                </select>
+                <select class="filter-select" id="brandFilter">
+                    <option value="all">Marque</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="lamborghini">Lamborghini</option>
+                </select>
+                <select class="filter-select" id="priceFilter">
+                    <option value="all">Prix</option>
+                    <option value="0-1000">0 - 1000MAD/jour</option>
+                    <option value="1000-2000">1000 - 2000MAD/jour</option>
+                    <option value="2000+">2000MAD+ /jour</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicles Grid Section -->
+     
+    <!-- Vehicles Grid Section -->
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Véhicules Disponibles</h2>
+            <div class="view-toggle">
+                <button class="active" id="gridView"><i class='bx bxs-grid'></i></button>
+                <button id="listView"><i class='bx bx-list-ul'></i></button>
+            </div>
+        </div>
+        
+        <div class="vehicles-grid" id="vehiclesContainer">
+            <!-- 1. Ferrari SF90 Stradale -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/ferrari sf90 stradale.jpg" alt="Ferrari SF90 Stradale">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Ferrari SF90 Stradale</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1000 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 1000 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 5500 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Rolls-Royce Phantom -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Rolls-Royce Phantom.jpg" alt="Rolls-Royce Phantom">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Rolls-Royce Phantom</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 571 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 4.550.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Lamborghini Aventador SVJ -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Lamborghini Aventador SVJ.jpg" alt="Lamborghini Aventador SVJ">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Lamborghini Aventador SVJ</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2023</span>
+                        <span><i class='bx bxs-dashboard'></i> 3500 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 770 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 4800 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Bentley Continental GT -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="/./assets/img/img_luxe/Bentley Continental GT Speed.jpeg" alt="Bentley Continental GT">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Bentley Continental GT Speed</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 659 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 2.650.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Porsche 911 GT3 RS -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Porsche 911 GT3 RS.jpg" alt="Porsche 911 GT3 RS">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Porsche 911 GT3 RS</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1500 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 525 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 3800 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. McLaren 765LT -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/McLaren 765LT.jpg" alt="McLaren 765LT">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>McLaren 765LT</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 765 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 3.820.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Aston Martin DBS Superleggera -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/aston martin dbs superleggera.jpg" alt="Aston Martin DBS">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Aston Martin DBS Superleggera</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2023</span>
+                        <span><i class='bx bxs-dashboard'></i> 2000 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 725 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 6200 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Ferrari 812 Competizione -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Ferrari 812 Competizione.jpg" alt="Ferrari 812 Competizione">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Ferrari 812 Competizione</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 830 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 4.990.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Mercedes-AMG GT Black Series -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Mercedes-AMG GT Black Series.jpg" alt="Mercedes-AMG GT Black Series">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Mercedes-AMG GT Black Series</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1200 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 730 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 4100 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Bugatti Chiron -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/bugatti chiron super sport.jpeg" alt="Bugatti Chiron">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Bugatti Chiron Super Sport</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 1600 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 3.200.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuons avec les 10 dernières voitures... -->
+
+            <!-- 11. Lamborghini Urus Performante -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="/assets/img/img_luxe/Lamborghini Urus Performante.jpg" alt="Lamborghini Urus">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Lamborghini Urus Performante</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1800 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 666 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 2900 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Porsche Taycan Turbo S -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/porsche taycan turbo s.jpg" alt="Porsche Taycan">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Porsche Taycan Turbo S</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 761 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 1.890.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 13. Audi RS e-tron GT -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Audi RS e-tron GT.jpg" alt="Audi RS e-tron GT">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Audi RS e-tron GT</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1500 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 646 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 2200 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. Maserati MC20 -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/maserati mc20.jpg" alt="Maserati MC20">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Maserati MC20</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 630 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 2.250.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Bentley Flying Spur -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/bentley flying spur mulliner.jpg" alt="Bentley Flying Spur">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Bentley Flying Spur Mulliner</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 800 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 635 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 2800 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Ferrari Roma -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Ferrari Roma.jpg" alt="Ferrari Roma">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Ferrari Roma</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 620 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 2.150.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. Rolls-Royce Cullinan -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/rolls-royce cullinan black badge.jpg" alt="Rolls-Royce Cullinan">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Rolls-Royce Cullinan Black Badge</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1200 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 600 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 2800 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. McLaren Artura -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/mclaren artura.jpg" alt="McLaren Artura">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>McLaren Artura</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 680 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 2.450.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19. Aston Martin DBX707 -->
+            <div class="vehicle-card" data-type="location">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Aston Martin DBX707.jpg" alt="Aston Martin DBX707">
+                    <span class="status-tag">Location</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Aston Martin DBX707</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 1000 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 707 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>À partir de: 1900 MAD/jour</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver maintenant</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20. Lamborghini Revuelto -->
+            <div class="vehicle-card" data-type="vente">
+                <div class="vehicle-image">
+                    <img src="./assets/img/img_luxe/Lamborghini Revuelto.jpg" alt="Lamborghini Revuelto">
+                    <span class="status-tag">Vente</span>
+                </div>
+                <div class="vehicle-details">
+                    <h3>Lamborghini Revuelto</h3>
+                    <div class="specs">
+                        <span><i class='bx bxs-calendar'></i> 2024</span>
+                        <span><i class='bx bxs-dashboard'></i> 0 km</span>
+                        <span><i class='bx bxs-horse-power'></i> 1015 ch</span>
+                    </div>
+                    <div class="price">
+                        <span>Prix: 5.500.000 MAD</span>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Réserver un essai</button>
+                        <button class="btn btn-outline">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Luxury Experience Section -->
+    <section class="luxury-experience">
+        <div class="container">
+            <div class="experience-content">
+                <h2>L'Excellence Automobile</h2>
+                <p>Découvrez nos services premium pour une expérience unique</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class='bx bxs-car-mechanic'></i>
+                        <h3>Service Personnalisé</h3>
+                        <p>Un conseiller dédié pour répondre à tous vos besoins</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-medal'></i>
+                        <h3>Garantie Premium</h3>
+                        <p>Une garantie complète pour votre tranquillité d'esprit</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-calendar-check'></i>
+                        <h3>Livraison sur Mesure</h3>
+                        <p>Service de livraison personnalisé à l'adresse de votre choix</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voiture_neuves.html">Voitures Neuves</a>
+                        <a href="voiture_occasions.html">Voitures Occasions</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Entretien</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CAR+. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/js/script_luxe.js"></script>
+</body>
+</html>
