@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Assurance Automobile</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_assurance.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="home.html" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="/" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voiture_neuves.html">Neuves</a>
+                        <a href="voiture_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="location.html">Location</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="login.html" class="btn btn-outline">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="insurance-hero">
+        <div class="container">
+            <h1>Protection Complète Pour Votre Véhicule</h1>
+            <p>Des solutions d'assurance sur mesure pour votre tranquillité d'esprit</p>
+        </div>
+    </section>
+
+    <!-- Insurance Types -->
+    <section class="insurance-types">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Formules d'Assurance</h2>
+                <p>Choisissez la couverture qui correspond le mieux à vos besoins</p>
+            </div>
+            <div class="insurance-grid">
+                <!-- Formule Basique -->
+                <div class="insurance-card">
+                    <div class="insurance-icon">
+                        <i class='bx bx-shield'></i>
+                    </div>
+                    <h3 class="insurance-title">Formule Basique</h3>
+                    <div class="insurance-price">À partir de 290 MAD/mois</div>
+                    <p class="insurance-description">Couverture essentielle pour répondre aux exigences légales</p>
+                    <div class="insurance-features">
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Responsabilité civile</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Protection juridique</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Assistance 24/7</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Choisir cette offre</button>
+                </div>
+
+                <!-- Formule Premium -->
+                <div class="insurance-card">
+                    <div class="insurance-icon">
+                        <i class='bx bx-crown'></i>
+                    </div>
+                    <h3 class="insurance-title">Formule Premium</h3>
+                    <div class="insurance-price">À partir de 490 MAD/mois</div>
+                    <p class="insurance-description">Protection complète pour une tranquillité totale</p>
+                    <div class="insurance-features">
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Tous risques</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Vol et incendie</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Bris de glace</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Véhicule de remplacement</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Choisir cette offre</button>
+                </div>
+
+                <!-- Formule Luxe -->
+                <div class="insurance-card">
+                    <div class="insurance-icon">
+                        <i class='bx bx-diamond'></i>
+                    </div>
+                    <h3 class="insurance-title">Formule Luxe</h3>
+                    <div class="insurance-price">À partir de 790 MAD/mois</div>
+                    <p class="insurance-description">La meilleure protection pour les véhicules haut de gamme</p>
+                    <div class="insurance-features">
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Couverture illimitée</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Service conciergerie</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Protection valeur neuf</span>
+                        </div>
+                        <div class="insurance-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Assistance premium</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Choisir cette offre</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Obtenez un Devis Gratuit</h2>
+                <p>Recevez une estimation personnalisée en quelques minutes</p>
+            </div>
+            <form class="quote-form" id="quoteForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carModel">Modèle du véhicule</label>
+                        <input type="text" id="carModel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carYear">Année du véhicule</label>
+                        <select id="carYear" required>
+                            <option value="">Sélectionnez une année</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="insuranceType">Type d'assurance</label>
+                        <select id="insuranceType" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="basic">Formule Basique</option>
+                            <option value="premium">Formule Premium</option>
+                            <option value="luxury">Formule Luxe</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Obtenir mon devis</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Avantages</h2>
+                <p>Pourquoi choisir CAR+ pour votre assurance auto</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class='bx bx-time benefit-icon'></i>
+                    <h3 class="benefit-title">Rapidité</h3>
+                    <p class="benefit-description">Devis instantané et souscription en ligne en quelques minutes</p>
+                </div>
+                <div class="benefit-card">
+                    <i class='bx bx-check-shield benefit-icon'></i>
+                    <h3 class="benefit-title">Fiabilité</h3>
+                    <p class="benefit-description">Une expertise reconnue et des garanties solides</p>
+                </div>
+                <div class="benefit-card">
+                    <i class='bx bx-support benefit-icon'></i>
+                    <h3 class="benefit-title">Support 24/7</h3>
+                    <p class="benefit-description">Assistance et service client disponibles à tout moment</p>
+                </div>
+                <div class="benefit-card">
+                    <i class='bx bx-credit-card benefit-icon'></i>
+                    <h3 class="benefit-title">Paiement Facile</h3>
+                    <p class="benefit-description">Options de paiement flexibles et sécurisées</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                <div class="footer-social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="voiture_neuves.html">Neuves</a>
+                    <a href="voiture_occasions.html">Voitures Occasions</a>
+                    <a href="financement.html">Financement</a>
+                    <a href="assurance.html">Assurance</a>
+                    <a href="maintenance.html">Entretien</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <div class="footer-links">
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-links">
+                    <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                    <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                    <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CAR+. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+<script src="./static/js/script_assurance.js"></script>
+
+</body>
+</html>
