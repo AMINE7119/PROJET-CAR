@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="location.html">Location</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS<i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="pub.html">Pub</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="#" class="btn btn-outline">Connexion</a>
+                    <a href="#" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section avec boutons plus visibles -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Découvrez votre<br>prochaine voiture</h1>
+                <p>Explorez une gamme exceptionnelle de véhicules qui combinent luxe, performance et technologie.</p>
+                <div class="hero-btns enhanced">
+                    <a href="#" class="btn btn-primary pulse">Explorer</a>
+                    <a href="#" class="btn btn-outline glow">En savoir plus</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/img/img_home/home_page.jpeg" alt="Voiture de luxe">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <span>Nos Avantages</span>
+                <h2>Pourquoi choisir CAR+ ?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class='bx bx-check-shield'></i>
+                    <h3>Facilité d'Achat</h3>
+                    <p>Processus d'achat simplifié et transparent pour une expérience sans stress.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-trophy'></i>
+                    <h3>Gammes Exclusives</h3>
+                    <p>Accès aux meilleures marques et modèles du marché automobile.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-star'></i>
+                    <h3>Service 5 Étoiles</h3>
+                    <p>Une équipe d'experts dédiée à votre satisfaction totale.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-credit-card'></i>
+                    <h3>Financement Flexible</h3>
+                    <p>Solutions de financement personnalisées selon vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cars Section -->
+    <section class="popular-cars">
+        <div class="container">
+            <div class="section-title">
+                <span>Véhicules Populaires</span>
+                <h2>Notre Sélection Premium</h2>
+            </div>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="/AGILE-CAR-/assets/img/img_home/G63.jpg" alt="Mercedes-Benz">
+                    </div>
+                    <div class="car-details">
+                        <h3>Mercedes-Benz G63</h3>
+                        <p class="car-price">125.000 MAD</p>
+                        <div class="car-specs">
+                            <div class="car-spec">
+                                <i class='bx bx-tachometer'></i>
+                                <p>350 km/h</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-calendar'></i>
+                                <p>2024</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-gas-pump'></i>
+                                <p>Hybride</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./assets/img/img_home/bmserie7.jpg" alt="BMW">
+                    </div>
+                    <div class="car-details">
+                        <h3>BMW Série 7</h3>
+                        <p class="car-price">98.000 MAD</p>
+                        <div class="car-specs">
+                            <div class="car-spec">
+                                <i class='bx bx-tachometer'></i>
+                                <p>320 km/h</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-calendar'></i>
+                                <p>2024</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-gas-pump'></i>
+                                <p>Électrique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./assets/img/img_home/RSQ8.jpg" alt="Audi">
+                    </div>
+                    <div class="car-details">
+                        <h3>Audi A8</h3>
+                        <p class="car-price">105.000 MAD</p>
+                        <div class="car-specs">
+                            <div class="car-spec">
+                                <i class='bx bx-tachometer'></i>
+                                <p>280 km/h</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-calendar'></i>
+                                <p>2024</p>
+                            </div>
+                            <div class="car-spec">
+                                <i class='bx bx-gas-pump'></i>
+                                <p>Carburant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <span>Témoignages</span>
+                <h2>Ce que disent nos clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Une expérience d'achat exceptionnelle. Le service client est impeccable et la qualité des véhicules est incomparable."</p>
+                    <h4>Jean Dupont</h4>
+                    <span>CEO, Tech Solutions</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Je recommande vivement CAR+ pour leur professionnalisme et leur expertise dans le domaine automobile."</p>
+                    <h4>Marie Lambert</h4>
+                    <span>Directrice Marketing</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Un service personnalisé et des conseils avisés qui m'ont permis de trouver la voiture de mes rêves."</p>
+                    <h4>Pierre Martin</h4>
+                    <span>Entrepreneur</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>1500+</h3>
+                    <p>Véhicules Vendus</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Clients Satisfaits</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Marques Premium</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15</h3>
+                    <p>Années d'Expérience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <span>Nos Services</span>
+                <h2>Solutions Complètes</h2>
+            </div>
+            <div class="features-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-car'></i>
+                    </div>
+                    <h3>Reprise Auto</h3>
+                    <p>Estimation gratuite de votre véhicule actuel</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-wallet'></i>
+                    </div>
+                    <h3>Financement</h3>
+                    <p>Solutions de crédit et leasing adaptées</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-shield'></i>
+                    </div>
+                    <h3>Garantie</h3>
+                    <p>Extensions de garantie personnalisées</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-wrench'></i>
+                    </div>
+                    <h3>Entretien</h3>
+                    <p>Service après-vente premium</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à trouver votre prochaine voiture ?</h2>
+            <p>Contactez-nous dès aujourd'hui pour découvrir nos offres exclusives !</p>
+            <a href="#" class="btn btn-primary">Voir nos véhicules</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voiture-neuves.html">Achat de voiture</a>
+                        <a href="location.html">Location</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Maintenance</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="#"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="#"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC, 75000</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2024 CAR+</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Button -->
+    <button class="chatbot-btn">
+        <i class='bx bx-message-rounded-dots'></i>
+    </button>
+
+    <script src="./static/js/script_home.js"></script>
+</body>
+</html>
