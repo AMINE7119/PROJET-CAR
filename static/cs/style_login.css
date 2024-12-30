@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F9FAFB;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 64px;
+    font-weight: 700;
+    color: #FF6600;
+    margin-bottom: 10px;
+  }
+  
+  .logo span {
+    color: #0B192C;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0B192C;
+    margin-top: 20px;
+  }
+  
+  .subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: #0B192C;
+    margin-top: 10px;
+  }
+  
+  .login-box {
+    width: 375px;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px rgba(50, 50, 71, 0.05);
+    border-radius: 10px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px 50px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 3px 8px rgba(50, 50, 71, 0.05);
+    font-size: 16px;
+    font-weight: 600;
+    color: #A8AFB9;
+  }
+  
+  .input-group i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #A8AFB9;
+    font-size: 20px;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #0B192C;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #FF6600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .already-account {
+    font-size: 14px;
+    color: rgba(4, 4, 21, 0.4);
+    font-weight: 500;
+  }
+  
+  .already-account a {
+    color: #FF6600;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .gg-profile {
+    position: absolute;
+    top: 50%;
+    left: 19px; /* Positioned to the right of the first icon */
+    transform: translateY(-50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+  }
+  
+  .lockpasswd {
+    position: absolute;
+    top: 50%;
+    left: 19px; /* Positioned to the right of the first icon */
+    transform: translateY(-50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+  }
+
+  .forgot-password {
+    font-size: 14px;
+    color: #0B192C;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animation douce pour le changement de couleur */
+}
+
+.forgot-password:hover {
+    color: #FF6600; /* Couleur lorsque le curseur est dessus */
+    text-decoration: underline; /* Ajoute un soulignement pour plus de visibilité (optionnel) */
+}
