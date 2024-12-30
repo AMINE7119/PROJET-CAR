@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Blog Automobile</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_blog.css">
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <a href="home.html" class="logo">CAR<span>+</span></a>
+        <button class="mobile-menu-btn">
+            <i class='bx bx-menu'></i>
+        </button>
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="home.html" class="nav-link">Accueil</a>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="voitures_neuves.html">Neuves</a>
+                    <a href="voitures_occasions.html">Occasions</a>
+                    <a href="location.html">Location</a>
+                    <a href="luxe.html">Luxe</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="financement.html">Financement</a>
+                    <a href="assurance.html">Assurance</a>
+                    <a href="maintenance.html">Entretien</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="equipe.html">Équipe</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="ar">AR</option>
+                </select>
+            </div>
+            <div class="auth-btns">
+                <a href="/connexion" class="btn btn-outline btn-hover-effect">Connexion</a>
+                <a href="/inscription" class="btn btn-primary btn-hover-effect">S'inscrire</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="blog-hero">
+    <div class="container">
+        <h1>Blog Automobile CAR+</h1>
+        <p>Découvrez les dernières actualités, conseils et tendances du monde automobile.</p>
+    </div>
+</section>
+
+<!-- Search Section -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Rechercher un article..." id="searchInput">
+            <button type="button" class="btn btn-primary btn-hover-effect">
+                <i class='bx bx-search'></i> Rechercher
+            </button>
+        </div>
+        <div class="category-tags">
+            <span class="category-tag active" data-category="all">Tous</span>
+            <span class="category-tag" data-category="new">Nouveautés</span>
+            <span class="category-tag" data-category="tests">Tests</span>
+            <span class="category-tag" data-category="advice">Conseils</span>
+            <span class="category-tag" data-category="tech">Technologie</span>
+            <span class="category-tag" data-category="lifestyle">Lifestyle</span>
+            <span class="category-tag" data-category="events">Événements</span>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Posts -->
+<section class="featured-posts">
+    <div class="container">
+        <div class="section-title">
+            <h2>Articles à la Une</h2>
+            <p>Découvrez nos articles les plus populaires sélectionnés pour vous</p>
+        </div>
+        <div class="featured-grid" id="featuredPosts">
+           <!-- Article 2 -->
+           <article class="blog-card">
+            <div class="blog-image">
+                <img src="./assets/img/img_blog/serie7.jpg" alt="Entretien voiture">
+            </div>
+            <div class="blog-content">
+                <span class="blog-category">Nouveautés</span>
+                <h3 class="blog-title">La nouvelle BMW Série 7 : L'innovation au service du luxe</h3>
+                <p class="blog-excerpt">
+                    Apprenez les meilleures pratiques pour maintenir votre véhicule en parfait état et 
+                    prolonger sa durée de vie...
+                </p>
+                <div class="blog-meta">
+                    <div class="blog-author">
+                        <div class="author-avatar">
+                            <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                        </div>
+                        <span>Par Sophie Dubois</span>
+                    </div>
+                    <span>Il y a 4 jours</span>
+                </div>
+            </div>
+        </article>
+
+
+            <!-- Article 2 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="./assets/img/img_blog/conseil.jpeg" alt="Entretien voiture">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Conseils</span>
+                    <h3 class="blog-title">5 conseils essentiels pour l'entretien de votre voiture</h3>
+                    <p class="blog-excerpt">
+                        Apprenez les meilleures pratiques pour maintenir votre véhicule en parfait état et 
+                        prolonger sa durée de vie...
+                    </p>
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <div class="author-avatar">
+                                <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                            </div>
+                            <span>Par Sophie Dubois</span>
+                        </div>
+                        <span>Il y a 4 jours</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="./assets/img/img_blog/tesla.jpg" alt="Voiture électrique">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Technologie</span>
+                    <h3 class="blog-title">Le futur de la mobilité électrique</h3>
+                    <p class="blog-excerpt">
+                        Découvrez les dernières innovations en matière de mobilité électrique et
+                        comment elles transforment l'industrie automobile...
+                    </p>
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <div class="author-avatar">
+                                <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                            </div>
+                            <span>Par Marc Dubois</span>
+                        </div>
+                        <span>Il y a 1 semaine</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Posts Section -->
+<section class="latest-posts">
+    <div class="container">
+        <div class="posts-grid">
+            <div class="main-posts" id="mainPosts">
+                <!-- Article Principal 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/img/img_blog/meilleucompara.jpeg" alt="Comparatif SUV">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Tests</span>
+                        <h3 class="blog-title">Comparatif : Les meilleurs SUV de luxe en 2024</h3>
+                        <p class="blog-excerpt">
+                            Notre équipe d'experts a testé les SUV les plus luxueux du marché. Découvrez notre top 5
+                            et nos recommandations détaillées pour chaque modèle, incluant performances, confort, et rapport qualité-prix...
+                        </p>
+                        <div class="blog-meta">
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                                </div>
+                                <span>Par Alexandre Petit</span>
+                            </div>
+                            <span>Il y a 3 jours</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Principal 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/img/img_blog/salon.jpg" alt="Salon automobile">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Événements</span>
+                        <h3 class="blog-title">Salon International de l'Auto 2024 : Les nouveautés à ne pas manquer</h3>
+                        <p class="blog-excerpt">
+                            Plongez dans l'univers des dernières innovations automobiles présentées lors du salon.
+                            Concepts cars révolutionnaires, technologies du futur et designs avant-gardistes...
+                        </p>
+                        <div class="blog-meta">
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                                </div>
+                                <span>Par Sarah Lambert</span>
+                            </div>
+                            <span>Il y a 5 jours</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Principal 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/img/img_blog/hiver.jpg" alt="Maintenance automobile">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Conseils</span>
+                        <h3 class="blog-title">Guide complet : Préparer sa voiture pour l'hiver</h3>
+                        <p class="blog-excerpt">
+                            Les étapes essentielles pour protéger votre véhicule pendant la saison froide. 
+                            Conseils d'experts, checklist complète et astuces pour une conduite sécurisée...
+                        </p>
+                        <div class="blog-meta">
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <img src="./assets/img/img_blog/user_icon_001.jpg" alt="Author">
+                                </div>
+                                <span>Par Michel Durand</span>
+                            </div>
+                            <span>Il y a 1 semaine</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-title">Articles Populaires</div>
+                <div class="popular-posts" id="popularPosts">
+                    <!-- Article Populaire 1 -->
+                    <article class="popular-post">
+                        
+                        <div class="popular-post-content">
+                            <h3>Guide d'achat : Comment choisir sa première voiture de luxe</h3>
+                            <p>Il y a 1 semaine • 8 min de lecture</p>
+                        </div>
+                    </article>
+
+                    <!-- Article Populaire 2 -->
+                    <article class="popular-post">
+                        
+                        <div class="popular-post-content">
+                            <h3>Les 10 voitures les plus attendues de 2024</h3>
+                            <p>Il y a 2 semaines • 6 min de lecture</p>
+                        </div>
+                    </article>
+
+                    <!-- Article Populaire 3 -->
+                    <article class="popular-post">
+                        
+                        <div class="popular-post-content">
+                            <h3>L'avenir de la conduite autonome : où en sommes-nous ?</h3>
+                            <p>Il y a 3 semaines • 10 min de lecture</p>
+                        </div>
+                    </article>
+
+                    <!-- Article Populaire 4 -->
+                    <article class="popular-post">
+                        
+                        <div class="popular-post-content">
+                            <h3>Entretien automobile : les erreurs à éviter</h3>
+                            <p>Il y a 1 mois • 7 min de lecture</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Restez informé</h2>
+            <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
+                <button type="submit" class="btn btn-primary btn-hover-effect">S'abonner</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                <div class="footer-social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="voiture_neuves.html">Voitures Neuves</a>
+                    <a href="voiture_occasions.html">Voitures Occasions</a>
+                    <a href="financement.html">Financement</a>
+                    <a href="maintenance.html">Entretien</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <div class="footer-links">
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-links">
+                    <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                    <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                    <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 CAR+</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Newsletter Popup -->
+<div class="overlay" id="overlay"></div>
+<div class="newsletter-popup" id="newsletterPopup">
+    <span class="popup-close" id="popupClose">&times;</span>
+    <h3>Restez connecté avec CAR+</h3>
+    <p>Inscrivez-vous pour recevoir nos dernières actualités et offres exclusives.</p>
+    <form class="newsletter-form" id="popupNewsletterForm">
+        <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
+        <button type="submit" class="btn btn-primary btn-hover-effect">S'abonner</button>
+    </form>
+</div>
+
+<script src="../AGILE-CAR-/static/js/script_blog.js"></script>
+</body>
+</html>
