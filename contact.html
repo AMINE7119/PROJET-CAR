@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Contactez-nous</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="./static/cs/styles_contact.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets automobiles.</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info">
+        <div class="info-grid">
+            <div class="info-card">
+                <i class='bx bx-phone'></i>
+                <h3>Téléphone</h3>
+                <p>+212 5 35 45 67 89</p>
+                <p>Lun-Ven: 9h-18h</p>
+            </div>
+            <div class="info-card">
+                <i class='bx bx-envelope'></i>
+                <h3>Email</h3>
+                <a href="mailto:contact@carplus.ma">contact@carplus.ma</a>
+                <p>Réponse sous 24h</p>
+            </div>
+            <div class="info-card">
+                <i class='bx bx-map'></i>
+                <h3>Adresse</h3>
+                <p>ESISA, FES, MAROC</p>
+                <p>Code Postal: 75000</p>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section -->
+    <section class="map-section">
+        <div id="map"></div>
+    </section>
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2 class="form-title">Envoyez-nous un message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="achat">Achat de véhicule</option>
+                            <option value="vente">Vente de véhicule</option>
+                            <option value="service">Services et maintenance</option>
+                            <option value="other">Autre demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+            <div class="contact-info-detailed">
+                <h2 class="form-title">Informations supplémentaires</h2>
+                <div class="info-list">
+                    <div class="info-item">
+                        <h3>Horaires d'ouverture</h3>
+                        <p>Lundi - Vendredi: 9h00 - 18h00</p>
+                        <p>Samedi: 9h00 - 12h00</p>
+                        <p>Dimanche: Fermé</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Service client</h3>
+                        <p>Hotline: +212 5 35 45 67 89</p>
+                        <p>Support: support@carplus.ma</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Service commercial</h3>
+                        <p>Ventes: sales@carplus.ma</p>
+                        <p>Partenariats: partners@carplus.ma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="social-title">
+            <h2>Suivez-nous sur les réseaux sociaux</h2>
+            <p>Restez connecté avec CAR+ pour les dernières actualités, offres exclusives et nouveautés.</p>
+        </div>
+        <div class="social-grid">
+            <div class="social-card facebook">
+                <i class='bx bxl-facebook'></i>
+                <h3>Facebook</h3>
+                <p>Rejoignez notre communauté</p>
+                
+            </div>
+            <div class="social-card instagram">
+                <i class='bx bxl-instagram'></i>
+                <h3>Instagram</h3>
+                <p>Suivez nos stories quotidiennes</p>
+                
+            </div>
+            <div class="social-card twitter">
+                <i class='bx bxl-twitter'></i>
+                <h3>Twitter</h3>
+                <p>Actualités en temps réel</p>
+                
+            </div>
+            <div class="social-card linkedin">
+                <i class='bx bxl-linkedin'></i>
+                <h3>LinkedIn</h3>
+                <p>Actualités professionnelles</p>
+                
+            </div>
+            <div class="social-card youtube">
+                <i class='bx bxl-youtube'></i>
+                <h3>YouTube</h3>
+                <p>Découvrez nos vidéos</p>
+                
+            </div>
+            <div class="social-card tiktok">
+                <i class='bx bxl-tiktok'></i>
+                <h3>TikTok</h3>
+                <p>Contenus créatifs et tendances</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--button pour la home page-->
+    <button class="home-btn">
+        <i class='bx bx-home'></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="./static/js/script_contact.js">   
+    </script>
+</body>
+</html>
