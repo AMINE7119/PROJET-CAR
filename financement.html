@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Solutions de Financement</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/styles_financement.css">
+</head>
+<body>
+   <!-- Header -->
+   <header class="header">
+    <div class="container">
+        <a href="#" class="logo">CAR<span>+</span></a>
+        <button class="mobile-menu-btn">
+            <i class='bx bx-menu'></i>
+        </button>
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="#" class="nav-link">Accueil</a>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="voitures_neuves.html">Neuves</a>
+                    <a href="voitures_occasions.html">Occasions</a>
+                    <a href="location.html">Location</a>
+                    <a href="luxe.html">Luxe</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="financement.html">Financement</a>
+                    <a href="assurance.html">Assurance</a>
+                    <a href="maintenance.html">Entretien</a>
+                    <a href="location.html">Location</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">PLUS<i class='bx bx-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="pub.html">Pub</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="equipe.html">Équipe</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+            <div class="auth-btns">
+                <a href="#" class="btn btn-outline">Connexion</a>
+                <a href="#" class="btn btn-primary">S'inscrire</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- Finance Hero Section -->
+    <section class="finance-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Solutions de Financement sur Mesure</h1>
+                <p class="hero-description">En partenariat avec la Société Générale Marocaine de Banques, nous vous proposons des solutions de financement adaptées à vos besoins.</p>
+                <button class="btn btn-primary">Simuler mon crédit</button>
+                <div class="partner-logos">
+                    <div class="partner-logo">
+                        <img src="./assets/img/img_financement/BP-Banque-populaire.jpg" alt="SGMB Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="./assets/img/img_financement/SG.png" alt="CAR+ Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Options -->
+    <section class="finance-options">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Solutions de Financement</h2>
+                <p>Découvrez nos offres adaptées à tous vos besoins</p>
+            </div>
+            <div class="options-grid">
+                <!-- Crédit Classique -->
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class='bx bx-money'></i>
+                    </div>
+                    <h3 class="option-title">Crédit Auto Classique</h3>
+                    <div class="option-description">
+                        <p>Financez votre véhicule avec des mensualités fixes</p>
+                        <p class="price">À partir de 4,5%</p>
+                    </div>
+                    <div class="option-features">
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Montant jusqu'à 1 000 000 MAD</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Durée jusqu'à 84 mois</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Réponse sous 48h</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">En savoir plus</button>
+                </div>
+
+                <!-- Leasing -->
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class='bx bx-car'></i>
+                    </div>
+                    <h3 class="option-title">Leasing</h3>
+                    <div class="option-description">
+                        <p>Solution professionnelle avec option d'achat</p>
+                        <p class="price">Avantages fiscaux</p>
+                    </div>
+                    <div class="option-features">
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Déductibilité fiscale</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Loyers modulables</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Entretien inclus</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">En savoir plus</button>
+                </div>
+
+                <!-- LOA -->
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class='bx bx-refresh'></i>
+                    </div>
+                    <h3 class="option-title">Location avec Option d'Achat</h3>
+                    <div class="option-description">
+                        <p>Profitez de votre véhicule en toute flexibilité</p>
+                        <p class="price">Sans apport initial</p>
+                    </div>
+                    <div class="option-features">
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Loyers réduits</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Choix en fin de contrat</span>
+                        </div>
+                        <div class="option-feature">
+                            <i class='bx bx-check'></i>
+                            <span>Garantie constructeur</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section class="simulator-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simulateur de Crédit</h2>
+                <p>Calculez vos mensualités en quelques clics</p>
+            </div>
+            <div class="simulator-container">
+                <form id="creditSimulator" class="form-grid">
+                    <div class="form-group">
+                        <label for="amount">Montant du crédit (MAD)</label>
+                        <input type="number" id="amount" min="50000" max="1000000" step="10000" value="300000">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Durée (mois)</label>
+                        <select id="duration">
+                            <option value="12">12 mois</option>
+                            <option value="24">24 mois</option>
+                            <option value="36">36 mois</option>
+                            <option value="48" selected>48 mois</option>
+                            <option value="60">60 mois</option>
+                            <option value="72">72 mois</option>
+                            <option value="84">84 mois</option>
+                        </select>
+                    </div>
+                    <div class="simulator-result">
+                        <h3>Mensualité estimée</h3>
+                        <div class="monthly-payment" id="monthlyPayment">0 MAD</div>
+                        <p>* Simulation non contractuelle</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Documents Requis</h2>
+                <p>Liste des documents nécessaires pour votre dossier</p>
+            </div>
+            <div class="documents-grid">
+                <div class="document-card">
+                    <i class='bx bx-id-card document-icon'></i>
+                    <h3 class="document-title">Pièce d'identité</h3>
+                    <p class="document-description">CIN ou passeport en cours de validité</p>
+                </div>
+                <div class="document-card">
+                    <i class='bx bx-money document-icon'></i>
+                    <h3 class="document-title">Justificatifs de revenus</h3>
+                    <p class="document-description">3 derniers bulletins de salaire et attestation de travail</p>
+                </div>
+                <div class="document-card">
+                    <i class='bx bx-building document-icon'></i>
+                    <h3 class="document-title">Justificatif de domicile</h3>
+                    <p class="document-description">Facture récente d'eau, d'électricité ou quittance de loyer</p>
+                </div>
+                <div class="document-card">
+                    <i class='bx bx-file document-icon'></i>
+                    <h3 class="document-title">Relevés bancaires</h3>
+                    <p class="document-description">3 derniers relevés de compte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                <div class="footer-social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="voiture_neuves.html">Voitures Neuves</a>
+                    <a href="voiture_occasions.html">Voitures Occasions</a>
+                    <a href="financement.html">Financement</a>
+                    <a href="maintenance.html">Entretien</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <div class="footer-links">
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-links">
+                    <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                    <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                    <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 CAR+</p>
+        </div>
+    </div>
+</footer>
+   <script src="./static/js/financement.js"></script>
+</body>
+</html>
