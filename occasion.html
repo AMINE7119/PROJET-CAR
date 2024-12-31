@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Voitures de Luxe</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./static/cs/style_occasion.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="home.html" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="home.html" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="/connexion" class="btn btn-outline">Connexion</a>
+                    <a href="/inscription" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>VOITURE D'OCCASION</h1>
+            <p>Découvrez notre sélection exclusive de véhicules d'occasion</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                
+                <select class="filter-select" id="brandFilter">
+                    <option value="all">Marque</option>
+                    <option value="bmw série 3">BMW Série 3</option>
+                    <option value="audi a4">Audi</option>
+                    <option value="Mercedes-Benz Classe C">Mercedes-Benz</option>
+                    <option value="Volkswagen Golf">Volkswagen</option>
+                    <option value="Peugeot 308">Peugeot</option>
+                    <option value="Renault Mégane">Renault</option>
+                    <option value="Ford Focus">Ford</option>
+                    <option value="Toyota Corolla">Toyota</option>
+                    <option value="Mazda 3">Mazda</option>
+                    <option value="Opel Astra">Opel</option>
+                </select>
+                <select class="filter-select" id="priceFilter">
+                    <option value="all">Prix</option>
+                    <option value="0-100000">0 - 100000 MAD</option>
+                    <option value="100000 - 200000">100000-200000 MAD</option>
+                    <option value="200000+">200000 MAD+</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    
+     
+    <!-- Vehicles Grid Section -->
+<section class="vehicles-section" >
+    <div class="container">
+        <div class="section-header" >
+            <h2>Véhicules Disponibles</h2>
+            <div class="view-toggle">
+                <button class="active" id="gridView"><i class='bx bxs-grid'></i></button>
+                <button id="listView"><i class='bx bx-list-ul'></i></button>
+            </div>
+        </div>
+        
+        <div class="vehicles-grid" id="vehiclesContainer">
+           <!-- 1. BMW Série 3 -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/bmw série 3.png" alt="BMW Série 3">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>BMW Série 3</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2020</span>
+            <span><i class='bx bxs-dashboard'></i> 45,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 184 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 250.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Audi A4 -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/audi a4.png" alt="Audi A4">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Audi A4</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2019</span>
+            <span><i class='bx bxs-dashboard'></i> 60,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 190 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 130.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Mercedes-Benz Classe C -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Mercedes-Benz Classe C.png" alt="Mercedes-Benz Classe C">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Mercedes-Benz Classe C</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2018</span>
+            <span><i class='bx bxs-dashboard'></i> 50,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 204 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 300.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Volkswagen Golf -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Volkswagen Golf.png" alt="Volkswagen Golf">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Volkswagen Golf</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2017</span>
+            <span><i class='bx bxs-dashboard'></i> 40,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 150 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 120.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Peugeot 308 -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Peugeot 308.png" alt="Peugeot 308">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Peugeot 308</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2020</span>
+            <span><i class='bx bxs-dashboard'></i> 35,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 130 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 120.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 6. Renault Mégane -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Renault Mégane.png" alt="Renault Mégane">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Renault Mégane</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2016</span>
+            <span><i class='bx bxs-dashboard'></i> 55,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 115 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 120.500 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 7. Ford Focus -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Ford Focus.png" alt="Ford Focus">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Ford Focus</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2018</span>
+            <span><i class='bx bxs-dashboard'></i> 50,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 120 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 90.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 8. Toyota Corolla -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Toyota Corolla.png" alt="Toyota Corolla">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Toyota Corolla</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2020</span>
+            <span><i class='bx bxs-dashboard'></i> 30,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 140 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 170.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 9. Mazda 3 -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Mazda 3.png" alt="Mazda 3">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Mazda 3</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2017</span>
+            <span><i class='bx bxs-dashboard'></i> 40,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 165 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 230.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+<!-- 10. Opel Astra -->
+<div class="vehicle-card" data-type="occasion">
+    <div class="vehicle-image">
+        <img src="./assets/img/img_occasion/Opel Astra.png" alt="Opel Astra">
+        <span class="status-tag">Occasion</span>
+    </div>
+    <div class="vehicle-details">
+        <h3>Opel Astra</h3>
+        <div class="specs">
+            <span><i class='bx bxs-calendar'></i> 2012</span>
+            <span><i class='bx bxs-dashboard'></i> 60,000 km</span>
+            <span><i class='bx bxs-horse-power'></i> 130 ch</span>
+        </div>
+        <div class="price">
+            <span>Prix: 170.000 MAD</span>
+        </div>
+        <div class="actions">
+            <a href="reserver_essaie.html" class="btn btn-primary">Réserver un essai</a>
+            <button class="btn btn-outline">En savoir plus</button>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- Luxury Experience Section -->
+    <section class="luxury-experience">
+        <div class="container">
+            <div class="experience-content">
+                <h2>L'Excellence Automobile</h2>
+                <p>Découvrez nos services premium pour une expérience unique</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class='bx bxs-car-mechanic'></i>
+                        <h3>Service Personnalisé</h3>
+                        <p>Un conseiller dédié pour répondre à tous vos besoins</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-medal'></i>
+                        <h3>Garantie Premium</h3>
+                        <p>Une garantie complète pour votre tranquillité d'esprit</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-calendar-check'></i>
+                        <h3>Livraison sur Mesure</h3>
+                        <p>Service de livraison personnalisé à l'adresse de votre choix</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voiture_neuves.html">Voitures Neuves</a>
+                        <a href="voiture_occasions.html">Voitures Occasions</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Entretien</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CAR+. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/js/script_occasion.js"></script>
+</body>
+</html>
