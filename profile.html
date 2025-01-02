@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Mon Profil</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./styles_profile.css">
+</head>
+<body>
+    <!-- Top Bar avec bouton déconnexion -->
+    <div class="top-bar">
+        <button class="logout-btn">
+            <i class='bx bx-log-out'></i>
+            Déconnexion
+        </button>
+    </div>
+
+    <!-- Bouton Home flottant -->
+    <a href="home.html" class="home-btn">
+        <i class='bx bx-home'></i>
+    </a>
+
+    <!-- Container Principal -->
+    <div class="profile-container">
+        <!-- Sidebar -->
+        <aside class="profile-sidebar">
+            <div class="profile-avatar">
+                <svg class="default-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="35" r="25" fill="#1E3E62"/>
+                    <circle cx="50" cy="100" r="45" fill="#1E3E62"/>
+                </svg>
+                <button class="change-avatar">
+                    <i class='bx bx-camera'></i>
+                </button>
+            </div>
+            <div class="profile-info">
+                <h2>Mehdi Himedi</h2>
+                <p>Membre depuis Janvier 2024</p>
+            </div>
+            <nav class="profile-nav">
+                <a href="#infos" class="nav-item active">
+                    <i class='bx bx-user'></i>
+                    Informations personnelles
+                </a>
+                <a href="#locations" class="nav-item">
+                    <i class='bx bx-car'></i>
+                    Mes locations
+                </a>
+                <a href="#favorites" class="nav-item">
+                    <i class='bx bx-heart'></i>
+                    Favoris
+                </a>
+                <a href="#documents" class="nav-item">
+                    <i class='bx bx-file'></i>
+                    Documents
+                </a>
+                <a href="#settings" class="nav-item">
+                    <i class='bx bx-cog'></i>
+                    Paramètres
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Contenu Principal -->
+        <main class="profile-content">
+            <!-- Section Informations -->
+            <section id="infos" class="profile-section active">
+                <h2 class="section-title">Informations personnelles</h2>
+                <form class="profile-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Prénom</label>
+                            <input type="text" value="mehdi" placeholder="Votre prénom">
+                        </div>
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" value="himedi" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value=" Mehdihimedi@gmail.com" placeholder="Votre email">
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone</label>
+                            <input type="tel" value="+212 634-567-890" placeholder="Votre téléphone">
+                        </div>
+                        <div class="form-group">
+                            <label>Date de naissance</label>
+                            <input type="date" value="1990-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label>Ville</label>
+                            <input type="text" value="Fès" placeholder="Votre ville">
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse</label>
+                            <input type="text" value="44 AV des FAR" placeholder="Votre adresse">
+                        </div>
+                        <div class="form-group">
+                            <label>Code postal</label>
+                            <input type="text" value="30000" placeholder="Code postal">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class='bx bx-save'></i>
+                        Sauvegarder les modifications
+                    </button>
+                </form>
+            </section>
+
+            <!-- Section Locations -->
+            <section id="locations" class="profile-section">
+                <h2 class="section-title">Mes Locations</h2>
+                <div class="locations-grid">
+                    <div class="location-card">
+                        
+                        <div class="location-details">
+                            <h3>Mercedes Classe C</h3>
+                            <p>Du 15/01/2024 au 20/01/2024</p>
+                            <span class="status active">En cours</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Favoris -->
+            <section id="favorites" class="profile-section">
+                <h2 class="section-title">Mes Favoris</h2>
+                <div class="favorites-grid">
+                    <div class="favorite-card">
+                        
+                        <div class="favorite-info">
+                            <h3>BMW Série 3</h3>
+                            <p>500 DH/jour</p>
+                            <button class="btn btn-primary">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Documents -->
+            <section id="documents" class="profile-section">
+                <h2 class="section-title">Mes Documents</h2>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <i class='bx bx-file'></i>
+                        <div class="document-info">
+                            <h3>Permis de conduire</h3>
+                            <p>Ajouté le 10/01/2024</p>
+                        </div>
+                        <button class="btn btn-secondary">Voir</button>
+                    </div>
+                    <div class="upload-zone">
+                        <i class='bx bx-upload'></i>
+                        <p>Déposer un nouveau document</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Paramètres -->
+            <section id="settings" class="profile-section">
+                <h2 class="section-title">Paramètres</h2>
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Notifications</h3>
+                        <div class="setting-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Recevoir des notifications par email</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script_profile.js"></script>
+</body>
+</html>
