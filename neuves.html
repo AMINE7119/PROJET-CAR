@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Voitures Neuves</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./styles_neuves.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="home.html" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="home.html" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html" class="active">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select" aria-label="Sélectionner la langue">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="/connexion" class="btn btn-outline">Connexion</a>
+                    <a href="/inscription" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>VOITURES NEUVES</h1>
+            <p>Découvrez notre sélection de véhicules neufs avec les meilleures offres du marché</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <select class="filter-select" id="brandFilter" data-filter="brand">
+                    <option value="">Toutes les marques</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="lexus">Lexus</option>
+                </select>
+                <select class="filter-select" id="modelFilter" data-filter="type">
+                    <option value="">Tous les types</option>
+                    <option value="berline">Berline</option>
+                    <option value="suv">SUV</option>
+                    <option value="coupe">Coupé</option>
+                    <option value="break">Break</option>
+                </select>
+                <select class="filter-select" id="transmissionFilter" data-filter="transmission">
+                    <option value="">Toutes les transmissions</option>
+                    <option value="automatique">Automatique</option>
+                    <option value="manuelle">Manuelle</option>
+                    <option value="dsg">DSG</option>
+                    <option value="e-cvt">E-CVT</option>
+                </select>
+                <select class="filter-select" id="energyFilter" data-filter="energy">
+                    <option value="">Toutes les énergies</option>
+                    <option value="essence">Essence</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="hybride">Hybride</option>
+                    <option value="mild-hybride">Mild-Hybride</option>
+                </select>
+                <select class="filter-select" id="priceFilter" data-filter="price">
+                    <option value="">Tous les prix</option>
+                    <option value="400000-450000">400 000 - 450 000 MAD</option>
+                    <option value="450000-500000">450 000 - 500 000 MAD</option>
+                    <option value="500000-550000">500 000 - 550 000 MAD</option>
+                    <option value="550000+">550 000+ MAD</option>
+                </select>
+            </div>
+            <div class="total-count" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Vehicles Grid Section -->
+    <section class="vehicles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Voitures Neuves Disponibles</h2>
+                <div class="view-toggle" role="group" aria-label="Changer la vue">
+                    <button class="active" id="gridView" aria-label="Vue grille">
+                        <i class='bx bxs-grid'></i>
+                    </button>
+                    <button id="listView" aria-label="Vue liste">
+                        <i class='bx bx-list-ul'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="vehicles-grid" id="vehiclesContainer">
+                <!-- Vehicle cards with data attributes for filtering -->
+                <article class="vehicle-card" 
+                    data-brand="bmw" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="hybride"
+                    data-price="589000">
+                    <div class="vehicle-image">
+                        <img src="X1.jpg" alt="BMW X1" loading="lazy">
+                        <div class="badge-new">NOUVEAU</div>
+                        <div class="badge-energy">Hybride</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>BMW X1</h3>
+                            <div class="vehicle-subtitle">xDrive25e M Sport</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Hybride</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 220ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">GPS</span>
+                            <span class="feature-tag">Caméra 360°</span>
+                            <span class="feature-tag">Toit Pano.</span>
+                            <span class="feature-tag">LED</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">589 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">5 890 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="bmw-x1">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Similar structure for other vehicles -->
+                <!-- Card 1: Audi Q5 -->
+                <article class="vehicle-card" 
+                    data-brand="audi" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="hybride"
+                    data-price="650000">
+                    <div class="vehicle-image">
+                        <img src="Q5.jpeg" alt="Audi Q5" loading="lazy">
+                        <div class="badge-new">NOUVEAU</div>
+                        <div class="badge-energy">Hybride</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>Audi Q5</h3>
+                            <div class="vehicle-subtitle">55 TFSI e Quattro</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Hybride</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 367ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Toit Pano</span>
+                            <span class="feature-tag">Caméra 360°</span>
+                            <span class="feature-tag">LED</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">650 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">6 500 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="audi-q5">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: BMW X3 -->
+                <article class="vehicle-card" 
+                    data-brand="bmw" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="diesel"
+                    data-price="620000">
+                    <div class="vehicle-image">
+                        <img src="X3.jpg" alt="BMW X3" loading="lazy">
+                        <div class="badge-energy">Diesel</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>BMW X3</h3>
+                            <div class="vehicle-subtitle">xDrive20d M Sport</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 190ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Toit Ouvrant</span>
+                            <span class="feature-tag">Caméra arrière</span>
+                            <span class="feature-tag">GPS</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">620 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">6 200 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="bmw-x3">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Mercedes-Benz GLC -->
+                <article class="vehicle-card" 
+                    data-brand="mercedes" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="essence"
+                    data-price="700000">
+                    <div class="vehicle-image">
+                        <img src="GLC.jpg" alt="Mercedes-Benz GLC" loading="lazy">
+                        <div class="badge-new">NOUVEAU</div>
+                        <div class="badge-energy">Essence</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>Mercedes-Benz GLC</h3>
+                            <div class="vehicle-subtitle">GLC 300 4MATIC</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 258ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Cuir</span>
+                            <span class="feature-tag">Toit Pano</span>
+                            <span class="feature-tag">Caméra 360°</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">700 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">7 000 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="mercedes-glc">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Volkswagen Tiguan -->
+                <article class="vehicle-card" 
+                    data-brand="volkswagen" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="diesel"
+                    data-price="450000">
+                    <div class="vehicle-image">
+                        <img src="TIGUAN.jpg" alt="Volkswagen Tiguan" loading="lazy">
+                        <div class="badge-energy">Diesel</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>Volkswagen Tiguan</h3>
+                            <div class="vehicle-subtitle">2.0 TDI R-Line</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 150ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Clim Auto</span>
+                            <span class="feature-tag">Park Assist</span>
+                            <span class="feature-tag">LED</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">450 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">4 500 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="volkswagen-tiguan">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5: Volvo XC60 -->
+                <article class="vehicle-card" 
+                    data-brand="volvo" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="hybride"
+                    data-price="750000">
+                    <div class="vehicle-image">
+                        <img src="./VOLVO.jpg" alt="Volvo XC60">
+                        <div class="badge-new">NOUVEAU</div>
+                        <div class="badge-energy">Hybride</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>Volvo XC60</h3>
+                            <div class="vehicle-subtitle">Recharge T8 AWD</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Hybride</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 407ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Toit Pano</span>
+                            <span class="feature-tag">Caméra 360°</span>
+                            <span class="feature-tag">Son Premium</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">750 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">7 500 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="volvo-xc60">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6: Lexus RX -->
+                <article class="vehicle-card" 
+                    data-brand="lexus" 
+                    data-type="suv" 
+                    data-transmission="automatique" 
+                    data-energy="hybride"
+                    data-price="800000">
+                    <div class="vehicle-image">
+                        <img src="./LEXUS.jpg" alt="Lexus RX" loading="lazy">
+                        <div class="badge-new">NOUVEAU</div>
+                        <div class="badge-energy">Hybride</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <div class="vehicle-title">
+                            <h3>Lexus RX</h3>
+                            <div class="vehicle-subtitle">RX 500h F Sport</div>
+                        </div>
+                        <div class="specs">
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car'></i> SUV</span>
+                                <span><i class='bx bxs-gas-pump'></i> Hybride</span>
+                            </div>
+                            <div class="specs-row">
+                                <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                                <span><i class='bx bx-tachometer'></i> 366ch</span>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <span class="feature-tag">Clim 4 zones</span>
+                            <span class="feature-tag">Caméra 360°</span>
+                            <span class="feature-tag">Son Premium</span>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="amount">800 000</span>
+                                <span class="currency">MAD</span>
+                            </div>
+                            <div class="financing">
+                                <span>ou</span>
+                                <div class="monthly">8 000 MAD/mois*</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a href="configurer.html" class="btn btn-primary">Configurer</a>
+                            <button class="btn btn-outline" data-vehicle="lexus-rx">Plus de détails</button>
+                        </div>
+                        <div class="stock-info available">
+                            <i class='bx bxs-check-circle'></i>
+                            Disponible en stock
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Add more vehicle cards with proper data attributes -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Pourquoi Choisir CAR+</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class='bx bx-check-shield'></i>
+                    <h3>Garantie Constructeur</h3>
+                    <p>Profitez de la garantie constructeur complète sur tous nos véhicules neufs</p>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-money-withdraw'></i>
+                    <h3>Financement Sur Mesure</h3>
+                    <p>Des solutions de financement adaptées à votre budget</p>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-support'></i>
+                    <h3>Service Premium</h3>
+                    <p>Un conseiller dédié pour vous accompagner dans votre projet</p>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-calendar-check'></i>
+                    <h3>Livraison Rapide</h3>
+                    <p>Véhicules disponibles immédiatement en stock</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules neufs et d'occasion.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <nav class="footer-links">
+                        <a href="voitures_neuves.html">Voitures Neuves</a>
+                        <a href="voitures_occasions.html">Voitures Occasions</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Entretien</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <nav class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <address><i class='bx bx-map'></i> ESISA, FES, MAROC</address>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>CAR+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script_neuves.js"></script>
+</body>
+</html>
