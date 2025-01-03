@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Location de Voitures de Luxe</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="C:\Users\830 g6\Desktop\projetWeb\PROJET-CAR\static\cs\styles_location.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="home.html" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="home.html" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="/connexion" class="btn btn-outline">Connexion</a>
+                    <a href="/inscription" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>LOCATION DE VOITURES</h1>
+            <p>Découvrez notre flotte exclusive de véhicules disponibles à la location</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filters">
+            <select class="filter-select" id="brandFilter">
+                <option value="all">Marque</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="renault">Renault</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="dacia">Dacia</option>
+                <option value="citroen">Citroën</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="ford">Ford</option>
+                <option value="toyota">Toyota</option>
+            </select>
+            <select class="filter-select" id="typeFilter">
+                <option value="all">Type</option>
+                <option value="citadine">Citadine</option>
+                <option value="compacte">Compacte</option>
+                <option value="berline">Berline</option>
+            </select>
+            <select class="filter-select" id="transmissionFilter">
+                <option value="all">Transmission</option>
+                <option value="manuelle">Manuelle</option>
+                <option value="automatique">Automatique</option>
+            </select>
+            <select class="filter-select" id="fuelFilter">
+                <option value="all">Carburant</option>
+                <option value="essence">Essence</option>
+                <option value="diesel">Diesel</option>
+                <option value="hybride">Hybride</option>
+            </select>
+            <select class="filter-select" id="priceFilter">
+                <option value="all">Prix/Jour</option>
+                <option value="0-300">0 - 300 MAD</option>
+                <option value="300-400">300 - 400 MAD</option>
+                <option value="400+">400+ MAD</option>
+            </select>
+        </div>
+        <div class="total-count"></div>
+    </div>
+</section>
+
+    <!-- Vehicles Grid Section -->
+    <section class="vehicles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Véhicules Disponibles à la Location</h2>
+                <div class="view-toggle">
+                    <button class="active" id="gridView"><i class='bx bxs-grid'></i></button>
+                    <button id="listView"><i class='bx bx-list-ul'></i></button>
+                </div>
+            </div>
+            <div class="vehicles-grid" id="vehiclesContainer">
+                <!-- Vehicle Card 1 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="./location/img-location/GOLF8.jpg" alt="Volkswagen Golf">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Volkswagen Golf 8</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Compacte</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 400 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="./location/img-location/clio5.jpeg" alt="Renault Clio">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Renault Clio 5</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 350 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/PEUGEOT208.jpeg" alt="Peugeot 208">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Peugeot 208</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 380 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/DACIALOGAN.jpeg" alt="Dacia Logan">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Dacia Logan</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Berline</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 300 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 5 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/CITROENC3.jpg" alt="Citroën C3">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Citroën C3</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 340 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 6 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/I20.jpg" alt="Hyundai i20">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Hyundai i20</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 360 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 7 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/fiesta.jpeg" alt="Ford Fiesta">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Ford Fiesta</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 370 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Vehicle Card 9 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/ibiza.jpg" alt="Seat Ibiza">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Seat Ibiza</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 380 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 10 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/corsa.jpg" alt="Opel Corsa">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Opel Corsa</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 375 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 11 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/500.jpg" alt="Fiat 500">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Fiat 500</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Mini Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Essence</span>
+                            <span><i class='bx bxs-car-garage'></i> Manuelle</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 340 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Vehicle Card 16 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/SERIE1.jpg" alt="BMW Série 1">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>BMW Série 1</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Berline</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 550 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 17 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/classA.jpg" alt="Mercedes Classe A">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Mercedes Classe A</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Berline</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 600 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Vehicle Card 19 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/A3.jpeg" alt="Audi A3">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Audi A3</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Berline</span>
+                            <span><i class='bx bxs-gas-pump'></i> Diesel</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 680 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 8 -->
+                <div class="vehicle-card" data-type="location">
+                    <div class="vehicle-image">
+                        <img src="C:/Users/830 g6/Desktop/projetWeb/PROJET-CAR/assets/img/img-location/img-location/YARIS.jpg" alt="Toyota Yaris">
+                        <span class="status-tag">Disponible</span>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Toyota Yaris</h3>
+                        <div class="specs">
+                            <span><i class='bx bxs-car'></i> Citadine</span>
+                            <span><i class='bx bxs-gas-pump'></i> Hybride</span>
+                            <span><i class='bx bxs-car-garage'></i> Automatique</span>
+                        </div>
+                        <div class="price">
+                            <span>Prix/Jour: 390 MAD</span>
+                        </div>
+                        <div class="actions">
+                            <a href="reserver_location.html" class="btn btn-primary">Réserver</a>
+                            <button class="btn btn-outline">Détails</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Benefits Section -->
+    <section class="luxury-experience">
+        <div class="container">
+            <div class="experience-content">
+                <h2>Pourquoi Louer avec CAR+</h2>
+                <p>Une expérience de location premium adaptée à vos besoins</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class='bx bxs-car-crash'></i>
+                        <h3>Assurance All-Risk</h3>
+                        <p>Couverture complète incluse dans tous nos tarifs</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-time-five'></i>
+                        <h3>Flexibilité Totale</h3>
+                        <p>Location à la journée, semaine ou au mois</p>
+                    </div>
+                    <div class="service-item">
+                        <i class='bx bxs-map'></i>
+                        <h3>Service de Livraison</h3>
+                        <p>Livraison et récupération à l'adresse de votre choix</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voitures_neuves.html">Voitures Neuves</a>
+                        <a href="voitures_occasions.html">Voitures Occasions</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Entretien</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2024 CAR+.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script_location.js"></script>
+</body>
+</html>
