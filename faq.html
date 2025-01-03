@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR+ - Foire Aux Questions</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="./styles_faq.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">CAR<span>+</span></a>
+            <button class="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Accueil</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Voitures <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="voitures_neuves.html">Neuves</a>
+                        <a href="voitures_occasions.html">Occasions</a>
+                        <a href="location.html">Location</a>
+                        <a href="luxe.html">Luxe</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="financement.html">Financement</a>
+                        <a href="assurance.html">Assurance</a>
+                        <a href="maintenance.html">Entretien</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">PLUS<i class='bx bx-chevron-down'></i></a>
+                    <div class="dropdown-content">
+                        <a href="pub.html">Pub</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="equipe.html">Équipe</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+                <div class="auth-btns">
+                    <a href="#" class="btn btn-outline">Connexion</a>
+                    <a href="#" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Foire Aux Questions</h1>
+            <p>Trouvez rapidement des réponses à vos questions</p>
+            <div class="search-container">
+                <input type="text" id="faq-search" placeholder="Rechercher une question...">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card active" data-category="achat">
+                    <i class='bx bx-car'></i>
+                    <h3>Achat de véhicule</h3>
+                </div>
+                <div class="category-card" data-category="financement">
+                    <i class='bx bx-money'></i>
+                    <h3>Financement</h3>
+                </div>
+                <div class="category-card" data-category="service">
+                    <i class='bx bx-wrench'></i>
+                    <h3>Service après-vente</h3>
+                </div>
+                <div class="category-card" data-category="location">
+                    <i class='bx bx-time'></i>
+                    <h3>Location</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+        <div class="container">
+            <!-- Achat de véhicule -->
+            <div class="faq-group active" id="achat">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment puis-je réserver un véhicule ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour réserver un véhicule, vous pouvez :</p>
+                        <ul>
+                            <li>Faire une réservation en ligne sur notre site</li>
+                            <li>Nous contacter par téléphone au +212 5 35 45 67 89</li>
+                            <li>Vous rendre dans l'une de nos agences</li>
+                        </ul>
+                        <p>Un acompte de 10% sera demandé pour confirmer la réservation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels documents sont nécessaires pour l'achat ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les documents requis sont :</p>
+                        <ul>
+                            <li>Pièce d'identité valide (CIN ou passeport)</li>
+                            <li>Justificatif de domicile de moins de 3 mois</li>
+                            <li>Permis de conduire valide</li>
+                            <li>Justificatifs de revenus pour le financement</li>
+                            <li>RIB pour le prélèvement automatique si financement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelle est la durée de livraison pour un véhicule neuf ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les délais de livraison varient selon :</p>
+                        <ul>
+                            <li>Le modèle choisi</li>
+                            <li>Les options sélectionnées</li>
+                            <li>La disponibilité en stock</li>
+                        </ul>
+                        <p>En moyenne, comptez :</p>
+                        <ul>
+                            <li>1-2 semaines pour les véhicules en stock</li>
+                            <li>2-4 mois pour une commande spéciale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous une garantie de reprise ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons plusieurs options de reprise :</p>
+                        <ul>
+                            <li>Reprise immédiate avec estimation sur place</li>
+                            <li>Garantie de reprise à la valeur résiduelle</li>
+                            <li>Option de reprise dans le cadre d'un financement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financement -->
+            <div class="faq-group" id="financement">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelles sont les options de financement disponibles ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous proposons plusieurs solutions :</p>
+                        <ul>
+                            <li>Crédit classique avec des taux à partir de 4.5%</li>
+                            <li>Location avec Option d'Achat (LOA)</li>
+                            <li>Leasing professionnel</li>
+                            <li>Financement balloon</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est le montant minimum d'apport nécessaire ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>L'apport minimum varie selon :</p>
+                        <ul>
+                            <li>Votre profil emprunteur</li>
+                            <li>Le type de financement choisi</li>
+                            <li>Le montant du véhicule</li>
+                        </ul>
+                        <p>En général, nous recommandons un apport de 10% minimum du prix du véhicule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont les avantages du leasing ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le leasing offre plusieurs avantages :</p>
+                        <ul>
+                            <li>Loyers moins élevés qu'un crédit classique</li>
+                            <li>Possibilité de changer de véhicule régulièrement</li>
+                            <li>Entretien et assurance peuvent être inclus</li>
+                            <li>Avantages fiscaux pour les professionnels</li>
+                            <li>Pas d'immobilisation de capital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service après-vente -->
+            <div class="faq-group" id="service">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelle est la durée de la garantie ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos garanties varient selon le type de véhicule :</p>
+                        <ul>
+                            <li>Véhicules neufs : 2 ans pièces et main d'œuvre</li>
+                            <li>Véhicules d'occasion : 1 an minimum</li>
+                            <li>Extensions de garantie disponibles jusqu'à 5 ans</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment prendre rendez-vous pour l'entretien ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Plusieurs options s'offrent à vous :</p>
+                        <ul>
+                            <li>En ligne via notre plateforme de réservation</li>
+                            <li>Par téléphone avec notre service client</li>
+                            <li>Directement en agence</li>
+                        </ul>
+                        <p>Nous proposons aussi un service de rappel pour les entretiens périodiques.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous un service de véhicule de remplacement ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons :</p>
+                        <ul>
+                            <li>Véhicule de prêt pendant les réparations sous garantie</li>
+                            <li>Location à tarif préférentiel hors garantie</li>
+                            <li>Service de navette gratuit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="faq-group" id="location">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelles sont les conditions de location ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour louer un véhicule, vous devez :</p>
+                        <ul>
+                            <li>Avoir au moins 21 ans</li>
+                            <li>Posséder un permis de conduire valide depuis 2 ans minimum</li>
+                            <li>Présenter une carte bancaire à votre nom</li>
+                            <li>Fournir un justificatif de domicile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>L'assurance est-elle incluse dans la location ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos tarifs incluent :</p>
+                        <ul>
+                            <li>Assurance responsabilité civile</li>
+                            <li>Protection contre le vol</li>
+                            <li>Assistance 24/7</li>
+                        </ul>
+                        <p>Des options supplémentaires sont disponibles :</p>
+                        <ul>
+                            <li>Rachat de franchise</li>
+                            <li>Protection tous risques</li>
+                            <li>Assurance conducteur étendue</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est le kilométrage autorisé ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le kilométrage dépend de votre formule :</p>
+                        <ul>
+                            <li>Forfait standard : 200 km/jour</li>
+                            <li>Forfait business : kilométrage illimité</li>
+                            <li>Forfaits personnalisés disponibles</li>
+                        </ul>
+                        <p>Tout dépassement est facturé selon le tarif en vigueur.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Puis-je prolonger ma location ?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, vous pouvez prolonger votre location :</p>
+                        <ul>
+                            <li>En nous contactant 24h avant la fin prévue</li>
+                            <li>Directement en agence</li>
+                            <li>Via votre espace client en ligne</li>
+                        </ul>
+                        <p>La prolongation est soumise à disponibilité du véhicule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Button -->
+    <div class="contact-button">
+        <a href="contact.html" class="btn btn-primary">
+            <i class='bx bx-envelope'></i>
+            Une question ? Contactez-nous
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>À propos</h4>
+                    <p>CAR+ propose une sélection exclusive de véhicules de luxe et sportifs.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="voiture_neuves.html">Voitures Neuves</a>
+                        <a href="voiture_occasions.html">Voitures Occasions</a>
+                        <a href="financement.html">Financement</a>
+                        <a href="maintenance.html">Entretien</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <div class="footer-links">
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="tel:+212535456789"><i class='bx bx-phone'></i> +212 5 35 45 67 89</a>
+                        <a href="mailto:contact@carplus.ma"><i class='bx bx-envelope'></i> contact@carplus.ma</a>
+                        <a href="#"><i class='bx bx-map'></i> ESISA, FES, MAROC</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2024 CAR+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script-faq.js"></script>
+</body>
+</html>
