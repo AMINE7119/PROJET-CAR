@@ -27,3 +27,4 @@ Nous utilisons **GitHub** pour gérer le code source de manière collaborative :
 
 ## Installation
  Clonez le dépôt 
+ git clone https://github.com/AMINE7119/PROJET-CAR.git 
