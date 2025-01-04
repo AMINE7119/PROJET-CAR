@@ -4,10 +4,10 @@
 PROJET-CAR est un projet collaboratif réalisé par une équipe de quatre développeurs dans le cadre d'un projet agile. Le site vise à présenter les services et offres de CAR+, une plateforme innovante pour l'achat, la location et l'entretien de véhicules. Nous avons utilisé les technologies **HTML**, **CSS**, et **JavaScript** pour développer ce projet.
 
 ## Équipe
-- **Amine Yani** : Responsable de la structure principale et de l'intégration des pages HTML.
-- **Mohammed Amine** : Chargé du design CSS et de l'optimisation visuelle du site.
-- **Salma** : Développement des fonctionnalités interactives en JavaScript.
-- **Aya** : Gestion de contenu et coordination générale de l'équipe.
+- **Amine Yani** 
+- **Mohammed Amine** 
+- **Salma** 
+- **Aya** 
 
 ## Méthodologie
 Nous avons adopté la méthode **Scrum** pour organiser notre travail en sprints hebdomadaires. Chaque membre a été assigné des tâches spécifiques tout en collaborant activement pour garantir l'intégration fluide des différentes parties du projet.
